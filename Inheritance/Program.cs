@@ -18,9 +18,7 @@ namespace Inheritance
             bigBird.NumberOfEyes = 2;
             bigBird.Sound = "Hi there boys and girls!";
 
-
-
-            bigBird.MakesSound();
+      
 
             Reptile kermit = new Reptile()
             {
@@ -34,7 +32,19 @@ namespace Inheritance
                 SpeaksEnglish = true
             };
 
-            kermit.MakesSound();
+   
+
+            var myAnimals = new Animal[] {bigBird, kermit };
+            foreach (var animal in myAnimals)
+            {
+                Console.WriteLine($"The {animal.Name} has hair? Answer: {animal.HasHair}");
+                Console.WriteLine($"The {animal.Name} has how many eyes?  Answer: {animal.NumberOfEyes}");
+                Console.WriteLine($"The {animal.Name} has what sound? Answer: {animal.Sound}");
+                Console.WriteLine($"Great! Let's hear that sound the {animal.Name} makes!");
+                animal.MakesSound();
+                Console.WriteLine(" ");
+
+            }
 
         }//end main
 
