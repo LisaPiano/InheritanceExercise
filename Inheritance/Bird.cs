@@ -11,7 +11,7 @@ namespace Inheritance
 
         public Bird()
         {
-
+            CanFly = true;
         }
         public bool CanFly { get; set; }
         public string Color { get; set; }

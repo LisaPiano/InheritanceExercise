@@ -12,10 +12,10 @@ namespace Inheritance
         {
 
         }
-        public bool hasLegs { get; set; }
-        public string color { get; set; }
-        public string size { get; set; }
-        public bool speaksEnglish { get; set; }
+        public bool HasLegs { get; set; }
+        public string Color { get; set; }
+        public string Size { get; set; }
+        public bool SpeaksEnglish { get; set; }
 
     }
 

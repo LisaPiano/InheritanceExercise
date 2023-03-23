@@ -8,64 +8,37 @@ namespace Inheritance
     {
         static void Main(string[] args)
         {
-        }
+            Bird bigBird = new Bird();
 
-            public class Animal
-        {
-            public Animal()
+            bigBird.Color = "yellow";
+            bigBird.EatsWorms = true;
+            bigBird.HasHair = false;
+            bigBird.Name = "BigBird";
+            bigBird.NumberOfEggs = 100;
+            bigBird.NumberOfEyes = 2;
+            bigBird.Sound = "Hi there boys and girls!";
+
+
+
+            bigBird.MakesSound();
+
+            Reptile kermit = new Reptile()
             {
+                Color = "green",
+                HasHair = false,
+                HasLegs = true,
+                Name = "Kermit",
+                NumberOfEyes = 2,
+                Size = "Small",
+                Sound = "It's not Easy Being Green",
+                SpeaksEnglish = true
+            };
 
-            }
-            public bool hasHair { get; set; }
-            public string name { get; set; }
-            public string sound { get; set; }
-            public int numberOfEyes { get; set; }
+            kermit.MakesSound();
 
-            public void makesSound()
-            {
-                Console.WriteLine($"{sound}");
-            }
-        }// End Animal CLass
+        }//end main
 
-
-        // Create a class Bird
-        // give this class 4 members that are specific to Bird
-        // Set this class to inherit from your Animal Class
-
-        public class Bird : Animal
-        {
-
-            public Bird()
-            {
-
-            }
-            public bool canFly { get; set; }
-            public string color { get; set; }
-            
-            public int numberOfEggs { get; set; }
-
-            public bool eatsWorms { get; set; }
-
-        }//end class Bird
-        // Create a class Reptile
-        // give this class 4 members that are specific to Reptile
-        // Set this class to inherit from your Animal Class
-
-
-        public class Reptile : Animal
-        { 
-        public Reptile() 
-            { 
-            
-            }
-            public bool hasLegs { get; set; }
-            public string color { get; set; }
-
-            public string size { get; set; }    
-
-            public bool speaksEnglish { get; set; } 
-        
-        }//end class Reptile
+           
 
         /*Create an object of your Bird class
          *  give values to your members using the object of your Bird class
